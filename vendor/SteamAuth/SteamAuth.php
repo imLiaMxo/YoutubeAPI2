@@ -47,7 +47,7 @@ class SteamAuth
 
         // Start a session if none exists
         if ($this->settings["apikey"] == "") {
-            die("<b>SteamAuth:</b> Please supply a valid API-Key!");
+            die("<b>SteamAuth:</b> Please supply a valid API-Key!"); 
         }
 
         if ($this->settings["loginpage"] == "") {
