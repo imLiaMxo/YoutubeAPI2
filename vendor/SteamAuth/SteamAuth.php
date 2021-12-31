@@ -40,9 +40,9 @@ class SteamAuth
         }
 
         $this->settings["apikey"] = Config::get('Staff', 'apiKey');
-        $this->settings["domainname"] = Config::get('Meta', 'url') or 'https://capitalroleplay.xyz/';
-        $this->settings["loginpage"] = Config::get('Meta', 'url') or 'https://capitalroleplay.xyz/';
-        $this->settings["logoutpage"] = Config::get('Meta', 'url') or 'https://capitalroleplay.xyz/';
+        $this->settings["domainname"] = Config::get('Meta', 'url') or 'https://fuckedit.xyz/';
+        $this->settings["loginpage"] = Config::get('Meta', 'url') or 'https://fuckedit.xyz/';
+        $this->settings["logoutpage"] = Config::get('Meta', 'url') or 'https://fuckedit.xyz/';
         $this->settings["skipAPI"] = false;
 
         // Start a session if none exists
