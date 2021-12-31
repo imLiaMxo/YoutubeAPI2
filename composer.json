@@ -1,0 +1,7 @@
+{
+    "require": {
+        "norkunas/youtube-dl-php": "dev-master",
+        "filp/whoops": "^2.14",
+        "jwilsson/spotify-web-api-php": "^5.0"
+    }
+}
