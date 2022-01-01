@@ -76,7 +76,8 @@
         public function insertVideo($videoId, $videoSize, $videoTitle, $videoDuration, $addedBy, $unix)
         {
             $time = time();
-            $conn = $this->connect()->prepare("INSERT INTO downloads (vid_id, vid_title, vid_duration, vid_filesize, requested_by, timestamp) VALUES ('$videoId', '{$this->connect()->quote($videoTitle)}', $videoDuration, $videoSize, '$addedBy', $unix)");
+            $conn = $this->connect()->prepare("INSERT INTO downloads (vid_id, vid_title, vid_duration, vid_filesize, requested_by, timestamp) VALUES ('$videoId', :vidTitle, $videoDuration, $videoSize, '$addedBy', $unix)");
+            $conn->bindParam(':vidTitle', $videoTitle);
             $conn->execute();
 
             $update = $this->connect()->prepare("UPDATE users SET daily_usage = daily_usage + 1, last_activity = {$time} WHERE apikey = '{$addedBy}'");
