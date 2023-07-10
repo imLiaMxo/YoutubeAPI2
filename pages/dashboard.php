@@ -74,7 +74,7 @@
                         <p class="mb-8 leading-relaxed">How did you wonder here? You need to be logged in!</p>
                     </div>
                 </div>
-            </section>');
+            </section>
             <?php } else { ?>
 
             <section class="w-full py-12 mx-auto bg-white" id="dash">
